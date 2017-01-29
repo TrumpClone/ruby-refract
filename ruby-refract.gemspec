@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name          = 'ruby-refract'
-  s.version       = '0.0.1'
-  s.date          = '2016-01-23'
+  s.version       = '0.0.2'
+  s.date          = '2017-01-29'
   s.summary       = 'Ruby Refract'
   s.description   = 'Ruby implementation for refract lookup'
   s.authors       = ['Yulia Oletskaya']
