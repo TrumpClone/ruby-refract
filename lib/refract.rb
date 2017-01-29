@@ -1,9 +1,11 @@
-class Refract
+require_relative 'refract/keys_transform'
+
+module Refract
   def self.search(json, query)
     fail(ArgumentError, 'Expected hash as the first argument') unless json.is_a?(Hash)
     fail(ArgumentError, 'Expected hash as the second argument') unless query.is_a?(Hash)
 
-    recursive_lookup(json.stringify_keys, query.stringify_keys)
+    recursive_lookup(Refract::KeysTransform.deep_stringify_keys(json), Refract::KeysTransform.deep_stringify_keys(query))
   end
 
   private
